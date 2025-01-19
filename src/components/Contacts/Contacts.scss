@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+  
+
+  .contactContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 5px 10px;
+    margin-top: 20px;
+    border-radius: 0 20px 20px 0;
+    padding: 5px;
+  }
+  
+  .accordion {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordion-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .accordion-description {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  .postFromContainer {
+    width: 500px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .postFromContainer-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .postFromContainer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .postFromContainer-input {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+    outline: none;
+  }
+  
+  .postFromContainer-button {
+    width: 100%;
+    background-color: #6610f2;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .postFromContainer-button:hover {
+    background-color: #7a0bc0;
+  }
+  
+  .postFromContainer-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Адаптация под телефон */
+  @media (max-width: 768px) {
+    .contactContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .postFromContainer {
+      width: 100%;
+
+    }
+  
+ 
+    .postFromContainer-input {
+      font-size: 14px;
+    }
+  
+    .postFromContainer-button {
+      font-size: 14px;
+    }
+  }
+  
+  /* Адаптация под телефон с экраном меньше 480px */
+  @media (max-width: 480px) {
+    .contactContainer {
+      padding: 10px;
+    }
+  
+    .postFromContainer {
+      margin: 0px;
+    }
+  
+  
+    .postFromContainer-input {
+      font-size: 12px;
+    }
+  
+    .postFromContainer-button {
+      font-size: 12px;
+    }
+  }

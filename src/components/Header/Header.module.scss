@@ -1,0 +1,157 @@
+@import "../../styles/contants.scss";
+
+.wrapper {
+  position: relative;
+  z-index: 5;
+  opacity: 1;
+  transform: none;
+  position: sticky;
+  top: 0px;
+  transition: all 300ms ease;
+  padding: 1rem;
+
+
+
+  .navbar {
+    margin: 0 auto;
+    max-width: 1280px;
+    justify-content: space-between;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: 500;
+      animation: mymove 5s infinite;
+      display: flex;
+      align-items: center;
+
+      .alBarakaContainer {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .alBarakaText {
+        font-weight: 600;
+      }
+    }
+
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .svgHeader {
+      padding: 5px;
+      border-radius: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.082);
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        scale: 1.1;
+      }
+      svg {
+        color: #0D2F3F !important;
+
+      }
+      
+    }
+
+    .links {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 14px;
+      font-weight: bold;
+      align-items: center;
+      @media (max-width: 961px) {
+        display: none;
+      }
+
+        a {
+          &:hover {
+            color: #6b24ee;
+            transition: all;
+          }
+        }
+      
+      
+    }
+
+    .menuIcon {
+      display: none;
+    
+      @media (max-width: 961px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.dropDownMenu {
+  display: none;
+  position: absolute;
+  top: 4.7rem;
+  right: 1rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  box-shadow: 0px 0px 5px rgba(130, 82, 194, 0.192);
+  border-radius: 1rem;
+  .svgHeader {
+    padding: 5px;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.082);
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      scale: 1.1;
+
+    }
+    svg {
+      color: #0D2F3F !important;
+
+    }
+    
+  }
+  .links {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+  &.open {
+    display: block;
+  }
+}
+
+.bpx {
+  background-image: linear-gradient(
+    to right,
+    #7328ffc7 0%,
+    #bc57ff 71%,
+    #5700fa 100%
+  );
+  height: 8px;
+}

@@ -1,0 +1,183 @@
+
+.prodcts {
+  width: full;
+  margin: auto;
+
+
+
+
+  .productImage {
+    width: fit-content;
+    background-color: white; 
+    position: relative;
+    border: 1px solid #b4b4b438;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(2, 2, 2, 0.082);
+    
+    p {
+      background-color: #EFBF13;
+      width: fit-content;
+      padding: 5px;
+      color: white;
+      font-weight: bold;
+      margin: 10px;
+      position: absolute;
+      right: 0;
+      font-size: 12px;
+      border-radius: 5px;
+    }
+  }
+
+  .parent {
+    width: full;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+    
+    @media screen and (max-width: 1240px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 977px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    .imageProducts {
+      width: 270px;
+      margin-top: 4rem;
+      object-fit: cover;
+      border-radius: 30px;
+      @media screen and (max-width: 977px) {
+        width: 240px;
+      }
+      @media screen and (max-width: 547px) {
+        width: 100%;
+      }
+    }
+
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .descriptions {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 200px;
+        overflow: hidden;
+
+        @media screen and (max-width: 977px) {
+          font-size: 12px;
+          width: 160px;
+        }
+      }
+
+      button {
+        width: full;
+        margin-top: 10px;
+        margin-bottom: 3rem;
+        padding: 15px 40px;
+        cursor: pointer;
+        transition: all;
+        font-weight: bold;
+        color: white;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        width: 100%;
+        background-color: #6610f2;
+        transition: background-color 0.2s ease-in-out;
+        &:hover {
+          background-color: #7a0bc0;
+        }
+
+        &:active {
+          background-color: #8122bd;
+        }
+      }
+
+      .price {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: 900;
+        font-size: 20px;
+        color: #A73AFD;
+      }
+    }
+  }
+
+}
+
+.postFromContainerRow {
+  margin-top: 1rem;
+
+  .postFromContainerInputName {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+    outline: none;
+    margin-bottom: 1rem;
+  }
+
+  .postFromContainerInputNumber {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+    outline: none;
+
+  }
+
+}
+
+.postFromContainerButton {
+  width: 100%;
+  background-color: #6610f2;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.postFromContainerButton:hover {
+  background-color: #7a0bc0;
+}
+
+.modalModalRow {
+  position: relative;
+
+  .closeButtonProduct {
+    position: absolute;
+    top: -1.9rem;
+    right: -1rem;
+    font-size: 27px;
+    border: none;
+    background-color: white;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+}
